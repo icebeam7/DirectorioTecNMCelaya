@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DirectorioTecNMCelaya.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,7 +12,17 @@ namespace DirectorioTecNMCelaya
     {
         public MainPage()
         {
-            InitializeComponent();
+            try
+            {
+                InitializeComponent();
+
+            }
+            catch(Exception ex)
+            {
+
+            }
+            //EnviarCorreo("luis.beltran@itcelaya.edu.mx", "saludo", "holis");
         }
+
     }
 }

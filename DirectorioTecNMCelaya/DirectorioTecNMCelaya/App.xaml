@@ -3,6 +3,45 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DirectorioTecNMCelaya.App">
     <Application.Resources>
+        <ResourceDictionary>
+            <Style x:Key="LabelBaseStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="HorizontalTextAlignment" Value="Start"/>
+                <Setter Property="LineBreakMode" Value="WordWrap"/>
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+            </Style>
 
+            <Style x:Key="LabelTitulo" TargetType="Label" BasedOn="{StaticResource LabelBaseStyle}">
+                <Setter Property="FontSize" Value="Large"/>
+                <Setter Property="TextColor" Value="Blue" />
+                <Setter Property="FontAttributes" Value="Bold"/>
+            </Style>
+
+            <Style x:Key="LabelDefault" TargetType="Label" BasedOn="{StaticResource LabelBaseStyle}">
+                <Setter Property="FontSize" Value="Medium"/>
+            </Style>
+
+            <Style x:Key="LabelDefaultNegrita" TargetType="Label" BasedOn="{StaticResource LabelDefault}">
+                <Setter Property="FontAttributes" Value="Bold"/>
+            </Style>
+
+            <Style x:Key="LabelPeque" TargetType="Label" BasedOn="{StaticResource LabelBaseStyle}">
+                <Setter Property="FontSize" Value="Small"/>
+            </Style>
+
+            <Style x:Key="LabelPequeNegrita" TargetType="Label" BasedOn="{StaticResource LabelPeque}">
+                <Setter Property="FontAttributes" Value="Bold"/>
+            </Style>
+
+            <Style x:Key="EntryBusqueda" TargetType="Entry">
+                <Setter Property="BackgroundColor" Value="White"/>
+                <Setter Property="TextColor" Value="Black"/>
+            </Style>
+
+            <Style x:Key="Separador" TargetType="BoxView">
+                <Setter Property="Color" Value="Black"/>
+                <Setter Property="HeightRequest" Value="2"/>
+            </Style>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DirectorioTecNMCelaya.Paginas.PaginaAcercaDe"
+             BackgroundImage="fondo.jpg" Opacity="0.5"
+             Title="Acerca de">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Spacing="10" Margin="20">
+                <Label Style="{StaticResource LabelDefaultNegrita}" 
+                       Text="Equipo de desarrollo:" />
+              
+                <Label Style="{StaticResource LabelPeque}" 
+                       Text="ISC Luis Beltrán (luis.beltran@itcelaya.edu.mx)"
+                       x:Name="lblLuis"/>
+
+                <Label Style="{StaticResource LabelDefault}" 
+                       Text="¿Qué te parece esta app? Envíanos tus comentarios, sugerencias y opiniones, serán altamente valoradas y apreciadas."/>
+
+                <Label Style="{StaticResource LabelDefault}" 
+                       Text="¿Quieres contribuir en el diseño y/o desarrollo de una aplicación de gran utilidad para los estudiantes y profesores del TecNM Celaya? ¡Envíanos un correo dando clic en mi nombre!"/>
+
+                <Label Style="{StaticResource LabelDefaultNegrita}" 
+                           Text="Versión actual: 0.0.2" />
+
+                <Label Style="{StaticResource LabelPequeNegrita}" 
+                           Text="**** Historial de cambios ****" />
+
+                <StackLayout Spacing="5">
+                    <Label Style="{StaticResource LabelPequeNegrita}" 
+                        Text="Versión 0.0.2 (2018-11-21)"/>
+
+                    <Label Style="{StaticResource LabelPeque}" 
+                        Text="- Rediseño y migración del proyecto." />
+                </StackLayout>
+
+                <StackLayout Spacing="5">
+                    <Label Style="{StaticResource LabelPequeNegrita}" 
+                        Text="Versión 0.0.1 (2015-08-13)"/>
+                
+                    <Label Style="{StaticResource LabelPeque}" 
+                            Text="- Se pueden enviar correos electrónicos." />
+                
+                    <Label Style="{StaticResource LabelPeque}" 
+                            Text="- Se puede filtrar la lista de contactos." />
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

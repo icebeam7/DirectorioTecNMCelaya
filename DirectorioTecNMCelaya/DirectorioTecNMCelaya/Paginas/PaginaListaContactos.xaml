@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DirectorioTecNMCelaya.Paginas.PaginaListaContactos"
+             BackgroundImage="fondo.jpg" Opacity="0.5"
+             Title="Lista de Contactos">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Spacing="10" Padding="10" Margin="20">
+                <Entry Style="{StaticResource EntryBusqueda}" 
+                       TextChanged="txtProfesores_TextChanged" 
+                       Placeholder="Escribe el nombre del profesor/empleado"
+                       x:Name="txtProfesores" />
+                
+                <BoxView Style="{StaticResource Separador}"/>
+                
+                <ListView x:Name="lstProfesores" HasUnevenRows="True" BackgroundColor="White">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Spacing="2" Padding="5">
+                                    <Label Text="{Binding Nombre}" Style="{StaticResource LabelDefault}" LineBreakMode="WordWrap" />
+                                    <Label Text="{Binding DepartamentoArea}" Style="{StaticResource LabelPeque}" LineBreakMode="WordWrap" />
+                                    <Label Text="{Binding Email}" Style="{StaticResource LabelPeque}" TextColor="#FFA500" />
+                                    <BoxView Style="{StaticResource Separador}" Color="Green"/>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="btnCorreo" Clicked="btnCorreo_Clicked" Order="Primary" Text="Enviar correo" Priority="0" Icon="mail.png"/>
+    </ContentPage.ToolbarItems>
+</ContentPage>

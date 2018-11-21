@@ -1,6 +1,8 @@
-﻿using System;
+﻿using System.Collections.Generic;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using DirectorioTecNMCelaya.Modelos;
+using DirectorioTecNMCelaya.Servicios;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace DirectorioTecNMCelaya
@@ -11,22 +13,12 @@ namespace DirectorioTecNMCelaya
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new Paginas.PaginaInicio());
         }
 
-        protected override void OnStart()
+        protected override async void OnStart()
         {
-            // Handle when your app starts
-        }
-
-        protected override void OnSleep()
-        {
-            // Handle when your app sleeps
-        }
-
-        protected override void OnResume()
-        {
-            // Handle when your app resumes
+            base.OnStart();
         }
     }
 }

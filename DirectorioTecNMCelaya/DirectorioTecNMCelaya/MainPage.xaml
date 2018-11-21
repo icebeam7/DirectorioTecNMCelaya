@@ -2,13 +2,20 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:DirectorioTecNMCelaya"
+             xmlns:controles="clr-namespace:DirectorioTecNMCelaya.Controles"
+             xmlns:efectos="clr-namespace:DirectorioTecNMCelaya.Efectos"
              x:Class="DirectorioTecNMCelaya.MainPage">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
-
+    <Grid Padding="0,20,0,0" BackgroundColor="Black">
+        <Label Text="Asunto: " FontSize="20" TextColor="White"
+               FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
+            <Label.Effects>
+                <efectos:EfectoSombra Color="Blue" Radio="5" X="5" Y="5"/>
+            </Label.Effects>
+        </Label>
+    </Grid>
+        <!--<controles:EntryRedondeado 
+            BorderColor="Green" BorderWidth="2" CornerRadius="18"
+            FontSize="Medium" HeightRequest="40" PlaceholderColor="Gray"
+            TextColor="Black" WidthRequest="100"/>-->
 </ContentPage>

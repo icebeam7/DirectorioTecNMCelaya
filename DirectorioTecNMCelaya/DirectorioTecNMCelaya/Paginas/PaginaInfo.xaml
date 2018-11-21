@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DirectorioTecNMCelaya.Paginas.PaginaInfo"
+             BackgroundImage="fondo.jpg" Opacity="0.5"
+             Title="Directorio TecNM App">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Spacing="10" Margin="20">
+                <Label Style="{StaticResource LabelTitulo}" 
+                       Text="Directorio TecNM Celaya App" />
+                <Label Style="{StaticResource LabelDefault}" 
+                       Text="Esta app pretende integrar servicios que puedan ser útiles a la comunidad estudiantil y docente del Tecnológico Nacional de México en Celaya." />
+                <Label Style="{StaticResource LabelDefaultNegrita}" 
+                       Text="Esta es una aplicación desarrollada con fines educativos y por tanto, NO OFICIAL."/>
+                <Label Style="{StaticResource LabelDefault}" 
+                       Text="¿Quieres contribuir con el desarrollo de esta app? Revisa la sección Acerca De para más información." />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
